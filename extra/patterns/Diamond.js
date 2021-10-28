@@ -1,6 +1,6 @@
-let input = process.argv.slice(2);
-let columns = +input[0];
-let diamond = (columns) => {
+import InputNumber  from '../index'
+let diamond = (InputNumber) => {
+  let columns = InputNumber;
   let a = "";
   let b = "";
   for (let i = 1; i <= columns * 2; i++) {
@@ -28,4 +28,6 @@ let diamond = (columns) => {
   console.log(`The Diamond of ${columns} columns : \n ${b} \n`);
 };
 
-diamond(columns);
+// diamond(columns);
+
+export default diamond;
