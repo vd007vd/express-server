@@ -1,18 +1,7 @@
-const users = [
-    {
-        traineeEmail: 'trainee1@successive.tech',
-        reviewerEmail: 'reviewer1@successive.tech'
-    },
-    {
-        traineeEmail:'trainee2@successive.tech',
-        reviewerEmail:'reviewer2@gmail.com'
-    }
-]
+import validateEmail from "./helper";
+import {users} from "../constants"
 
-let validateEmail = (email) =>{
-    const regex=/@successive.tech$/i;
-    return regex.test(email);
-}
+
 
 let validateUsers = (users) => {
     const validUsers = [];
@@ -38,4 +27,6 @@ let validateUsers = (users) => {
     console.log(`${validNumber} Users are Valid : \n`, validUsers)
     console.log(`${invalidNumber} Users are Invalid: \n`, invalidUsers)
 }
-validateUsers(users);
+// validateUsers(users);
+
+export default validateUsers;

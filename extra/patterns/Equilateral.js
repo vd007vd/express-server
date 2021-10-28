@@ -1,6 +1,9 @@
-let input = process.argv.slice(2);
-let rows = +input[0];
-let equilateral = (rows) => {
+import InputNumber  from '../index'
+
+// let input = process.argv.slice(2);
+// let rows = +input[0];
+let equilateral = (InputNumber) => {
+  let rows = InputNumber
   let a = "";
   let pyramid = "";
   for (let i = 1; i <= rows; i++) {
@@ -16,4 +19,6 @@ let equilateral = (rows) => {
   console.log(`The pyramid of ${rows} rows : \n ${pyramid} \n`);
 };
 
-equilateral(rows);
+// equilateral(rows);
+
+export default equilateral;
