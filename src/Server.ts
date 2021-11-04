@@ -1,4 +1,5 @@
 import * as express from 'express';
+import * as bodyParser from 'body-parser';
 class Server{
     public app;
     constructor(private config){
@@ -7,6 +8,7 @@ class Server{
 
     bootStrap(){
         this.setupRoutes();
+        this.initBodyParser();
         return this;
     }
 
@@ -17,6 +19,10 @@ class Server{
         })
 
         
+    }
+
+    initBodyParser(){
+        this.app.use(bodyParser.json());
     }
 
     run(){
