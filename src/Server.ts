@@ -1,6 +1,5 @@
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
-import routes from './router';
 class Server{
     public app;
     constructor(private config){
@@ -19,7 +18,7 @@ class Server{
             res.send('I am OK')
         })
 
-        app.use('/api',routes)
+        
     }
 
     initBodyParser(){
